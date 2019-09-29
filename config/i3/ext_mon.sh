@@ -9,5 +9,5 @@ elif [[ "$1" == "--off"  ]]; then
 fi
 
 killall compton; killall feh
-compton --backend glx --blur-method kawase --blur-strength 5 --blur-background &
+compton &
 feh --bg-scale ~/Pictures/bg.jpg &
