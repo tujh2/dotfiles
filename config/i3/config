@@ -18,6 +18,7 @@ bindsym $mod+Shift+Right exec  ~/.config/i3/ext_mon.sh -r right
 bindsym $mod+Shift+Up exec ~/.config/i3/ext_mon.sh -r normal
 bindsym $mod+m exec ~/.config/i3/ext_mon.sh --off
 bindsym $mod+n exec ~/.config/i3/nmcli.sh
+bindsym $mod+bracketright exec ~/.config/i3/vpn.sh
 
 # Font
 font pango: Arimo-Regular 10
@@ -53,7 +54,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
+bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -118,8 +119,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+S move scratchpad
-bindsym $mod+Shift+S scratchpad show
+bindsym $mod+bracketleft move scratchpad
+bindsym $mod+Shift+bracketleft scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
