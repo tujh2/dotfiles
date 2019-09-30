@@ -10,4 +10,4 @@ fi
 
 killall compton; killall feh
 compton &
-feh --bg-scale ~/Pictures/bg.jpg &
+feh --bg-scale ~/Pictures/bg.png &

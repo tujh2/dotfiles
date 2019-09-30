@@ -30,7 +30,7 @@ floating_modifier $mod
 bindsym $mod+q kill
 
 # Rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -modi drun
+bindsym $mod+d exec --no-startup-id ~/.config/i3/rofi.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -152,7 +152,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/dotfiles/.i3status.conf
+	status_command i3blocks -c ~/dotfiles/.i3blocks.conf
+        #status_command i3status --config ~/dotfiles/.i3status.conf
         position top
 }
 
@@ -165,11 +166,11 @@ gaps inner 5
 gaps outer 3
 
 # Extra Keys
-bindsym XF86MonBrightnessUp exec xbacklight -inc 15 -time 400 && dunstify $(xbacklight -get) --replace 2
-bindsym XF86MonBrightnessDown exec xbacklight -dec 15 -time 400 && dunstify $(xbacklight -get) --replace 2
-bindsym XF86AudioMute exec pamixer -t && ~/wm_scripts/is_muted.sh
-bindsym XF86AudioLowerVolume exec pamixer -d 5 && dunstify $(pamixer --get-volume) --replace=1
-bindsym XF86AudioRaiseVolume exec pamixer -i 5 && dunstify $(pamixer --get-volume) --replace=1
+bindsym XF86MonBrightnessUp exec xbacklight -inc 15 -time 400 
+bindsym XF86MonBrightnessDown exec xbacklight -dec 15 -time 400
+bindsym XF86AudioMute exec pamixer -t && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec pamixer -i 5 && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
