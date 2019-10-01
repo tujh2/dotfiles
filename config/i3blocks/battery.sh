@@ -9,7 +9,7 @@ if [[ "$bat_status" == "Discharging" ]]; then
 	elif [[ "$bat_now" -lt "40" ]]; then 
 		echo "<span foreground=\"#FFAE00\"> $bat_status</span> $bat_now %"
 	elif [[ "$bat_now" -lt "60"  ]]; then
-		echo "<span foreground=\"#FFF600\"> $bat_status</span> $bat_now> %"
+		echo "<span foreground=\"#FFF600\"> $bat_status</span> $bat_now %"
 	elif [[ "$bat_now" -lt "85" ]]; then 
 		echo "<span foreground=\"#A8FF00\"> $bat_status</span> $bat_now %"
 	else 

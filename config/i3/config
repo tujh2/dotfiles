@@ -17,8 +17,8 @@ bindsym $mod+Shift+Down exec ~/.config/i3/ext_mon.sh -r inverted
 bindsym $mod+Shift+Right exec  ~/.config/i3/ext_mon.sh -r right
 bindsym $mod+Shift+Up exec ~/.config/i3/ext_mon.sh -r normal
 bindsym $mod+m exec ~/.config/i3/ext_mon.sh --off
-bindsym $mod+n exec ~/.config/i3/nmcli.sh
-bindsym $mod+bracketright exec ~/.config/i3/vpn.sh
+bindsym $mod+n exec ~/.config/i3/nmcli.sh && pkill -RTMIN+11 i3blocks
+bindsym $mod+bracketright exec ~/.config/i3/vpn.sh && pkill -RTMIN+10 i3blocks
 
 # Font
 font pango: Arimo-Regular 10
