@@ -16,7 +16,7 @@ if [[ "$bat_status" == "Discharging" ]]; then
 		echo "  <span foreground=\"#00FF00\">$bat_now %</span>"
 	fi
 elif [[ "$bat_status" == "Charging" ]]; then
-	echo " <span foreground=\"#00FF00\"> $bat_now %</span>"
+	echo " <span foreground=\"#00FF00\">$bat_now %</span>"
 elif [[ "$bat_status" == "Full"  ]]; then
-	echo "  <span foreground=\"#00FF00\"> FULL</span>"
+	echo " <span foreground=\"#00FF00\">FULL</span>"
 fi
