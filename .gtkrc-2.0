@@ -12,4 +12,4 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintsight"
 gtk-xft-rgba="none"
-gtk-decoration-layout = appmenu:none
+#gtk-decoration-layout=appmenu:none
