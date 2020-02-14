@@ -1,13 +1,12 @@
 #!/bin/bash
 
 if [[ "$1" == "-p" ]]; then
-	xrandr --output HDMI1 --mode 1920x1080 $2 eDP1
+	xrandr --output HDMI1 --auto $2 eDP1
 elif [[ "$1" == "-r" ]]; then
 	xrandr --output HDMI1 --rotate $2
-elif [[ "$1" == "--off"  ]]; then
-	xrandr --output HDMI1 --off
+elif [[ "$1" == "--toggle"  ]]; then
+	xrandr --listactivemonitors | grep $2 > /dev/null && xrandr --output $2 --off || xrandr --output $2 --auto
 fi
 
-killall compton; killall feh
-compton &
+killall feh
 feh --bg-scale ~/Pictures/bg.png &
