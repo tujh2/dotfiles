@@ -8,5 +8,7 @@ elif [[ "$1" == "--toggle"  ]]; then
 	xrandr --listactivemonitors | grep $2 > /dev/null && xrandr --output $2 --off || xrandr --output $2 --auto
 fi
 
+xinput --map-to-output $(xinput list --id-only "ELAN Touchscreen") eDP1
+
 killall feh
 feh --bg-scale ~/Pictures/bg.png &

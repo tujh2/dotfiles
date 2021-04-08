@@ -1,7 +1,7 @@
 #!/bin/bash
-xss-lock -- i3lock -i ~/Pictures/bg.png &
+xss-lock -- sh ~/.config/i3/i3lock.sh &
 dunst &
-feh --bg-scale ~/Pictures/bg.png &
+~/.config/i3/wallpapers.sh &
 picom &
 setxkbmap -layout "us,ru" -option "grp:caps_toggle,grp_led:caps" &
 lxqt-policykit-agent &
