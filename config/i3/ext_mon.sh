@@ -10,5 +10,3 @@ fi
 
 xinput --map-to-output $(xinput list --id-only "ELAN Touchscreen") eDP1
 
-killall feh
-feh --bg-scale ~/Pictures/bg.png &
